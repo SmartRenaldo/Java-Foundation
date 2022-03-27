@@ -1,0 +1,46 @@
+引入：
+    我们之前得到的date日期对象或时间毫秒值的时间形式
+    开发中并不喜欢，不符合有些时间格式
+
+DateFormat的作用：
+    1.可以把“日期对象”或“时间毫秒值”格式化成我们喜欢的时间；
+    2：可以把字符串的时间形式解析成日期对象
+
+    DateFormat 是日期/时间格式化子类的抽象类，它以与语言无关的方式格式化并解析日期或时间。日期/时间格式化子类（如 SimpleDateFormat）允许进行格式化（也就是日期 -> 文本）、解析（文本-> 日期）和标准化。将日期表示为 Date 对象，或者表示为从 GMT（格林尼治标准时间）1970 年 1 月 1 日 00:00:00 这一刻开始的毫秒数。
+
+    DateFormat 提供了很多类方法，以获得基于默认或给定语言环境和多种格式化风格的默认日期/时间 Formatter。格式化风格包括 FULL、LONG、MEDIUM 和 SHORT。方法描述中提供了使用这些风格的更多细节和示例。
+
+    DateFormat 可帮助进行格式化并解析任何语言环境的日期。对于月、星期，甚至日历格式（阴历和阳历），其代码可完全与语言环境的约定无关。
+
+    要格式化一个当前语言环境下的日期，可使用某个静态工厂方法：
+
+      myString = DateFormat.getDateInstance().format(myDate);
+     如果格式化多个日期，那么获取该格式并多次使用它是更为高效的做法，这样系统就不必多次获取有关环境语言和国家/地区约定的信息了。
+
+      DateFormat df = DateFormat.getDateInstance();
+      for (int i = 0; i < myDate.length; ++i) {
+        output.println(df.format(myDate[i]) + "; ");
+      }
+     要格式化不同语言环境的日期，可在 getDateInstance() 的调用中指定它。
+
+      DateFormat df = DateFormat.getDateInstance(DateFormat.LONG, Locale.FRANCE);
+     还可使用 DateFormat 进行解析。
+
+      myDate = df.parse(myString);
+     使用 getDateInstance 来获取该国家/地区的标准日期格式。另外还提供了一些其他静态工厂方法。使用 getTimeInstance 可获取该国家/地区的时间格式。
+     使用 getDateTimeInstance 可获取日期和时间格式。可以将不同选项传入这些工厂方法，以控制结果的长度（从 SHORT 到 MEDIUM 到 LONG 再到 FULL）。
+     确切的结果取决于语言环境，但是通常：
+
+    SHORT 完全为数字，如 12.13.52 或 3:30pm
+    MEDIUM 较长，如 Jan 12, 1952
+    LONG 更长，如 January 12, 1952 或 3:30:32pm
+    FULL 是完全指定，如 Tuesday、April 12、1952 AD 或 3:30:42pm PST。
+    如果愿意，还可以在格式上设置时区。如果想对格式化或解析施加更多的控制（或者给予用户更多的控制），可以尝试将从工厂方法所获取的 DateFormat
+    强制转换为 SimpleDateFormat。这适用于大多数国家/地区；只是要记住将其放入一个 try 代码块中，以防遇到特殊的格式。
+
+    还可以使用借助 ParsePosition 和 FieldPosition 的解析和格式化方法形式来
+
+    逐步地解析字符串的各部分。
+    对齐任意特定的字段，或者找出字符串在屏幕上的选择位置。
+    同步
+    日期格式不是同步的。建议为每个线程创建独立的格式实例。如果多个线程同时访问一个格式，则它必须保持外部同步。
