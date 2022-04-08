@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.itcast.cn2/xml"
+        elementFormDefault="qualified">
+    <!-- targetNamespace:申明约束文档的地址（命名空间）-->
+    <!-- elementFormDefault:支持使用别名-->
+    <element name="bookshelf">
+        <!-- 写子元素 -->
+        <complexType>
+            <!-- maxOccurs='unbounded': 书架下的子元素可以有任意多个！-->
+            <sequence maxOccurs="unbounded">
+                <element name="book">
+                    <!-- 写子元素的！ -->
+                    <complexType>
+                        <!-- 子元素必须有序-->
+                        <sequence>
+                            <element name="name" type="string"/>
+                            <element name="author" type="string"/>
+                            <element name="price" type="decimal"/>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+</schema>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<students xmlns="http://www.itcast.org/xml"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://www.itcast.org/xml">
+    <student class="hogwarts_0001" grade="5">
+        <name>  Harry Potter</name>
+        <age>24 </age>
+        <gender>male</gender>
+    </student>
+    <student class="hogwarts_0002" grade="2">
+        <name>Marilyn monroe</name>
+        <age>55</age>
+        <gender>female</gender>
+    </student>
+</students>

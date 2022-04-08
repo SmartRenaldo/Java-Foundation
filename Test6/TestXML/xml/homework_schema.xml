@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<shopOrder xmlns="http://www.awesome.com/XMLDoc"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://www.awesome.com/XMLDoc homework_schema.xsd">
+    <goods>
+        <name>bean</name>
+        <price>55.55</price>
+        <number>4</number>
+    </goods>
+    <goods>
+        <name>beef</name>
+        <price>33.555</price>
+        <number>3</number>
+    </goods>
+</shopOrder>

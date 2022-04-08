@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<bookshelf xmlns="http://www.itcast.cn2/xml"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.itcast.cn2/xml books02.xsd">
+    <!--xmlns:it="http://www.itcast.cn/xml": 给引用的约束起前缀，用来控制当出现多个约束的时候使用的是哪一个-->
+    <!--若没有多个约束，则应写成xmlns="http://www.itcast.cn/xml"-->
+    <book>
+        <name>java learning</name>
+        <author>Yiqi Li</author>
+        <price>444.44</price>
+    </book>
+    <book>
+        <name>MySQL</name>
+        <author>trump</author>
+        <price>22.9</price>
+    </book>
+</bookshelf>

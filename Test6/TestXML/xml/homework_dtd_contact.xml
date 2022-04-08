@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE contacts SYSTEM "homework_dtd.dtd">
+<contacts>
+    <!--将上述id属性的值前加上"字母"或者_以符合XML命名规范再次验证则可通过-->
+    <contact id="a001">
+        <name>Morrison</name>
+        <gender>male</gender>
+        <phone>+61 0000000</phone>
+        <qq>null</qq>
+        <email>123456@aus.com</email>
+    </contact>
+    <contact id="a002" vip="true">
+        <name>Penny</name>
+        <gender>female</gender>
+        <phone>81489124t</phone>
+        <qq>134124t</qq>
+        <email>y5353</email>
+    </contact>
+    <contact id="a003" vip="false">
+        <name>Sheldon</name>
+        <gender>male</gender>
+        <phone>8138914</phone>
+        <qq>1414@qq.com</qq>
+        <email>1414@qq.com</email>
+    </contact>
+</contacts>

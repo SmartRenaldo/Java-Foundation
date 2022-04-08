@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--作业3.	通过Schema在idea下写出对应的XML文件-->
+<!--        	这是这个名为 "shoporder.xsd" 的 schema 文件的文档清单，写出它的XML文件-->
+<schema xmlns="http://www.w3.org/2001/XMLSchema"
+        targetNamespace="http://www.awesome.com/XMLDoc"
+        elementFormDefault="qualified">
+    <element name="shopOrder">
+        <complexType>
+            <sequence>
+                <element name="goods" minOccurs="0" maxOccurs="unbounded">
+                    <complexType>
+                        <sequence>
+                            <element name="name" type="string"/>
+                            <element name="price" type="double"/>
+                            <element name="number" type="integer"/>
+                        </sequence>
+                    </complexType>
+                </element>
+            </sequence>
+        </complexType>
+    </element>
+    <simpleType name="nameType">
+        <restriction base="string">
+            <pattern value="Walmart_\d{3}"/>
+        </restriction>
+    </simpleType>
+</schema>

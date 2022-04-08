@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE bookshelf SYSTEM "books.dtd">
+<bookshelf>
+    <book>
+        <name>Harry Potter</name>
+        <author>J.K. Rowling</author>
+        <price>55.99</price>
+        <content>fly</content>
+    </book>
+    <book>
+        <name>Black</name>
+        <author>Mike</author>
+        <price>expensive</price>
+        <content>color</content>
+    </book>
+</bookshelf>
