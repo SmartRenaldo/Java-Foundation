@@ -1,0 +1,12 @@
+------------Student------------
+name=Catherine
+age=22
+gender=female
+addr=Adelaide
+tel=61-2345678
+------------Pig------------
+name=Bajie
+age=1000
+gender=male
+weight=245.46
+color=black
